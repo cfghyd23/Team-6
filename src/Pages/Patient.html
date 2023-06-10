@@ -75,6 +75,10 @@
         display: flex;
         align-items: center;
       }
+      .Emergency {
+        display: flex;
+        align-items: center;
+      }
       
       .Gender {
         display: flex;
@@ -123,14 +127,6 @@
       <input type="email" id="email" name="email" required>
     </div>
     <div>
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" required>
-    </div>
-    <div>
-      <label for="confirm-password">Confirm Password:</label>
-      <input type="password" id="confirm-password" name="confirm-password" required>
-    </div>
-    <div>
       <label for="hospital">Hospital Name:</label>
       <input type="text" id="hospital" name="hospital" required>
     </div>
@@ -152,7 +148,7 @@
       <input type="date" id="required-date" name="required-date" required>
     </div>
     <div>
-      <label for="component">Component:</label>
+      <label for="component">Component Required:</label>
       <select id="component" name="component" required>
         <option value="">select</option>
         <option value="Whole Blood">Whole Blood</option>
@@ -188,6 +184,10 @@
       <input type="checkbox" id="join-bridge-program" name="join-bridge-program">
       <label for="join-bridge-program">Do you want to join the Bridge Program?</label>
     </div>
+    <div class="Emergency">
+        <input type="checkbox" id="emergency" name="emergency">
+        <label for="emergency">Is it Emergency?</label>
+      </div>
     <div>
       <input type="submit" value="Submit">
     </div>
