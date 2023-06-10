@@ -1,9 +1,12 @@
 import React from "react";
+import './bg.css';
 
 function WantToDonateBlood() {
+  
   return (
-    <div className="container form-container" style={{ maxWidth: "600px", margin: "0 auto" }}>
-      <h1>Donate Blood</h1>
+    
+    <div className="container form-container mt-3" style={{ maxWidth: "600px", margin: "0 auto" }}>
+      <h1 className=" text-center">Donate Blood</h1>
       <form>
         <div className="mb-3">
         <div className="mb-3">
@@ -56,9 +59,10 @@ function WantToDonateBlood() {
           <input type="text" className="form-control" id="location" />
         </div>
         
-        <button type="submit" className="btn btn-primary">Submit</button>
+        <button type="submit" className="btn btn-success ">Submit</button>
       </form>
     </div>
+   
   );
 }
 
