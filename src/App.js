@@ -5,6 +5,9 @@ import JoinUs from "./components/JoinUs";
 import LookingForBlood from "./components/LookingForBlood";
 import wantToDonateBlood from "./components/wantToDonateBlood";
 import './App.css';
+import ContactUs from "./components/contact";
+import Patients from "./components/patients";
+
 import {
   Routes,
   Route,
@@ -78,6 +81,10 @@ function App() {
             
 
           </Routes>
+          <div>
+            <Patients/>
+
+          </div>
    
         </div>
       </header>
