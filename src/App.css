@@ -35,27 +35,6 @@
 footer {
   background-color: #f8f8f8;
   padding: 20px;
-}
-
-.foot {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: black;
-}
-
-.social-media a {
-  margin-right: 10px;
-}
-
-.social-media img {
-  width: 20px;
-  height: 20px;
-}
-
-p {
-  margin: 0;
+  
 }
 

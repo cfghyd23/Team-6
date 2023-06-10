@@ -5,6 +5,8 @@ import JoinUs from "./components/JoinUs";
 import LookingForBlood from "./components/LookingForBlood";
 import WantToDonateBlood from "./components/wantToDonateBlood";
 import foot1 from './assets/foot2.jpeg'
+import foot3 from './assets/foot3.png'
+import foot5 from './assets/foot5.png'
 import './App.css';
 
 function App() {
@@ -68,16 +70,6 @@ function App() {
       </header>
       
     </div>
-    <footer>
-  <div class="foot">
-    <div class="social-media">
-      <a href="https://instagram.com/bwindia_?igshid=MzRlODBiNWFlZA=="><img src={foot1} alt="Instagram" /></a>
-      <a href="https://www.linkedin.com"><img src="https://instagram.com/bwindia_?igshid=MzRlODBiNWFlZA==" alt="LinkedIn"/></a>
-      <a href="https://www.twitter.com"><img src="https://instagram.com/bwindia_?igshid=MzRlODBiNWFlZA==" alt="Twitter"/></a>
-    </div>
-    <p>&copy; 2023 Your Website. All rights reserved.</p>
-  </div>
-</footer>
     </div>
     
   );
