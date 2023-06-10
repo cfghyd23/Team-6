@@ -1,5 +1,4 @@
 import React from "react";
-import { Routes, Route, Link } from "react-router-dom";
 import AboutUs from "./components/AboutUs";
 import JoinUs from "./components/JoinUs";
 import LookingForBlood from "./components/LookingForBlood";
@@ -8,7 +7,17 @@ import foot1 from './assets/foot2.jpeg'
 import foot3 from './assets/foot3.png'
 import foot5 from './assets/foot5.png'
 import './App.css';
+import ContactUs from "./components/contact";
+import Patients from "./components/patients";
+import Donor from "./components/donor";
 
+import {
+  Routes,
+  Route,
+  Link,
+  BrowserRouter,
+  useParams
+} from "react-router-dom";
 function App() {
   return (
     <div>
@@ -62,10 +71,11 @@ function App() {
 
           <Routes>
             <Route path="/" element={<AboutUs />} />
-            <Route path="/LookingForBlood" element={<LookingForBlood />} />
-            <Route path="/wantToDonateBlood" element={<WantToDonateBlood />} />
+            <Route path="/LookingForBlood" element={<Patients />} />
+            <Route path="/wantToDonateBlood" element={<Donor />} />
             <Route path="/JoinUs" element={<JoinUs />} />
           </Routes>
+
         </div>
       </header>
       

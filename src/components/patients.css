@@ -1,0 +1,85 @@
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+  /* Add some spacing between form elements */
+form div {
+    flex-basis: 100%;
+    margin-bottom: 10px;
+  }
+  
+  /* Style the labels */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.Gender {
+  display: flex;
+  align-items: center;
+}
+
+.Gender label {
+  margin-right: 10px;
+}
+
+.Gender div {
+  display: flex;
+  align-items: center;
+}
+
+  /* Style the input fields */
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+  
+  /* Style the submit button */
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Add some responsiveness */
+  @media (max-width: 600px) {
+    form div {
+      flex-basis: 100%;
+    }
+    
+    .Heading {
+      text-align: center;
+    }
+    
+    .Bridge {
+      display: flex;
+      align-items: center;
+    }
+    .Emergency {
+      display: flex;
+      align-items: center;
+    }
+    
+    .Gender {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+  .Heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
