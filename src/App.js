@@ -53,20 +53,20 @@ function App() {
                 </li>
                 <li className="nav-item ">
                   <Link className="nav-link active" to="LookingForBlood">
-                    Recipient
+                    Thalassemia Request
                   </Link>
                 </li>
                 <div className="ms-auto">
                   <li className="nav-item ">
                     <Link className="nav-link active" to="wantToDonateBlood">
-                      Donate Blood
+                      Want to Donate Blood
                     </Link>
                   </li>
                 </div>
                 <div className="ms-auto">
                   <li className="nav-item ">
                     <Link className="nav-link active" to="JoinUs">
-                      Join Network
+                      Join our Network
                     </Link>
                   </li>
                 </div>
