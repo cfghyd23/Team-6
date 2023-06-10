@@ -1,22 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
+import { Routes, Route, Link } from "react-router-dom";
+import './App.css';
 import AboutUs from "./components/AboutUs";
 import JoinUs from "./components/JoinUs";
 import LookingForBlood from "./components/LookingForBlood";
 import WantToDonateBlood from "./components/wantToDonateBlood";
-import './App.css';
 import ContactUs from "./components/contact";
 import Patients from "./components/patients";
 import Donor from "./components/donor";
 import Dashboard from "./components/Dashboard";
 
-import {
-  Routes,
-  Route,
-  Link,
-  BrowserRouter,
-  useParams
-} from "react-router-dom";
 function App() {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const handleDropdownToggle = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -52,10 +52,22 @@ function App() {
                     Recipient
                   </Link>
                 </li>
-                <li className="nav-item">
-                  <Link className="nav-link active" to="/wantToDonateBlood">
+                <li
+                  className={`nav-item dropdown ${isDropdownOpen ? 'show' : ''}`}
+                  onMouseEnter={handleDropdownToggle}
+                  onMouseLeave={handleDropdownToggle}
+                >
+                  <div className="nav-link dropdown-toggle">
                     Donate Blood
-                  </Link>
+                  </div>
+                  <div className={`dropdown-menu ${isDropdownOpen ? 'show' : ''}`}>
+                    <Link className="dropdown-item" to="/wantToDonateBlood">
+                      Register as Donor
+                    </Link>
+                    <Link className="dropdown-item" to="/Dashboard">
+                      Login as Donor
+                    </Link>
+                  </div>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link active" to="/JoinUs">
@@ -69,7 +81,7 @@ function App() {
           <Routes>
             <Route path="/" element={<AboutUs />} />
             <Route path="/LookingForBlood" element={<Patients />} />
-            <Route path="/wantToDonateBlood" element={<Donor />} />
+            <Route path="/wantToDonateBlood" element={<WantToDonateBlood />} />
             <Route path="/JoinUs" element={<JoinUs />} />
             <Route path="/Dashboard" element={<Dashboard />} />
           </Routes>
