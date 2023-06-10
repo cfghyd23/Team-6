@@ -1,4 +1,5 @@
 
+import DonorLogin from './components/DonorLogin';
 
 import AboutUs from "./components/AboutUs";
 import JoinUs from "./components/JoinUs";
@@ -12,8 +13,14 @@ import {
   BrowserRouter,
   useParams
 } from "react-router-dom";
+
+
+
 function App() {
+
+
   return (
+    <>
     <div className="App">
       <header className="App-header">
         <div>
@@ -74,17 +81,24 @@ function App() {
     
           <Routes>
             <Route path="/" element={<AboutUs />} />
-            <Route path="/LookingForBlood" element={<LookingForBlood/>} />
-            <Route path="/wantToDonateBlood" element={<wantToDonateBlood/>} />
-            <Route path="/JoinUs" element={ <JoinUs/>} />
+            <Route path="/LookingForBlood" element={<LookingForBlood />} />
+            <Route path="/wantToDonateBlood" element={<wantToDonateBlood />} />
+            <Route path="/JoinUs" element={<JoinUs />} />
+            <Route path="/DonorLogin" element={<DonorLogin />} /> 
             
-
           </Routes>
+
    
         </div>
       </header>
-
+      </div>
+      <div className="ms-auto">
+      <li className="nav-item ">
+        <Link className="nav-link active" to="/DonorLogin">Donor Login</Link>
+      </li>
     </div>
+    </>
+  
   );
 }
 
