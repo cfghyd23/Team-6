@@ -5,4 +5,7 @@
   } */
 .form-container{
     outline: 1px solid black;
+    border: 1px solid #ccc;
+      border-radius: 5px;
+    box-shadow: 1px 1px 20px rgba(230, 11, 11, 0.3);
 }
