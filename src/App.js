@@ -1,4 +1,5 @@
-import logo from './logo.svg';
+
+
 import AboutUs from "./components/AboutUs";
 import JoinUs from "./components/JoinUs";
 import LookingForBlood from "./components/LookingForBlood";
@@ -40,7 +41,7 @@ function App() {
       
                 <li className="nav-item ">
                   <Link className="nav-link active" to="">
-                    AboutUs
+                    About Us
                   </Link>
                 </li>
                 <li className="nav-item ">
@@ -80,6 +81,7 @@ function App() {
    
         </div>
       </header>
+
     </div>
   );
 }
