@@ -26,7 +26,7 @@ function App() {
         <div>
           <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
             <Link className="navbar-brand" to="">
-              <img src="" style={{width:"100px"}}/>
+              <img src="https://www.clipartmax.com/png/middle/149-1497912_blood-donation-up-donor-darah-logo-png.png" style={{width:"70px"}}/>
             </Link>
             <button
               className="navbar-toggler"
@@ -51,24 +51,22 @@ function App() {
                     About Us
                   </Link>
                 </li>
-                <div className="ms-auto">
-                  <li className="nav-item ">
-                    <Link className="nav-link active" to="LookingForBlood">
-                      Looking For Blood
-                    </Link>
-                  </li>
-                </div>
+                <li className="nav-item ">
+                  <Link className="nav-link active" to="LookingForBlood">
+                    Recipient
+                  </Link>
+                </li>
                 <div className="ms-auto">
                   <li className="nav-item ">
                     <Link className="nav-link active" to="wantToDonateBlood">
-                      Want To Donate Blood
+                      Donate Blood
                     </Link>
                   </li>
                 </div>
                 <div className="ms-auto">
                   <li className="nav-item ">
                     <Link className="nav-link active" to="JoinUs">
-                      Join Us
+                      Join Network
                     </Link>
                   </li>
                 </div>
