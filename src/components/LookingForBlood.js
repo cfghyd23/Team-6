@@ -2,7 +2,7 @@ import React from 'react'
 
 function LookingForBlood() {
   return (
-    <div>LookingForBlood</div>
+    <div>Thalassemia Request</div>
   )
 }
 
