@@ -1,38 +1,35 @@
-.App {
-  text-align: center;
+*{
+  font-family: 'Quicksand', sans-serif;
+  font-weight: normal;
+  font-style: normal;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar-menu{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-item{
+  padding: 11px 10px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.8s;
+  /* width: 120px;
+  justify-content: center;
+  text-align: center; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-item:hover{
+  background-color: orange;
+  border-radius: 30px;
+}
+.container{
+  background: url("https://image.shutterstock.com/z/stock-photo-salunkwadi-india-july-school-children-having-mid-day-meal-in-rural-village-salunkwadi-390522517.jpg") no-repeat;
+  background-size: 2000px 1200px;
+  margin: 0%
 }
