@@ -10,6 +10,7 @@ import './App.css';
 import ContactUs from "./components/contact";
 import Patients from "./components/patients";
 import Donor from "./components/donor";
+import Dashboard from "./components/Dashboard";
 
 import {
   Routes,
@@ -74,6 +75,7 @@ function App() {
             <Route path="/LookingForBlood" element={<Patients />} />
             <Route path="/wantToDonateBlood" element={<Donor />} />
             <Route path="/JoinUs" element={<JoinUs />} />
+            <Route path="/Dashboard" element={<Dashboard />} />
           </Routes>
 
         </div>
