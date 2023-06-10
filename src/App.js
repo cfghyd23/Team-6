@@ -1,32 +1,19 @@
-
-import DonorLogin from './components/DonorLogin';
-
+import React from "react";
+import { Routes, Route, Link } from "react-router-dom";
 import AboutUs from "./components/AboutUs";
 import JoinUs from "./components/JoinUs";
 import LookingForBlood from "./components/LookingForBlood";
-import wantToDonateBlood from "./components/wantToDonateBlood";
+import WantToDonateBlood from "./components/wantToDonateBlood";
 import './App.css';
-import {
-  Routes,
-  Route,
-  Link,
-  BrowserRouter,
-  useParams
-} from "react-router-dom";
-
-
 
 function App() {
-
-
   return (
-    <>
     <div className="App">
       <header className="App-header">
         <div>
           <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
-            <Link className="navbar-brand" to="">
-              <img src="https://www.clipartmax.com/png/middle/149-1497912_blood-donation-up-donor-darah-logo-png.png" style={{width:"70px"}}/>
+            <Link className="navbar-brand" to="/">
+              <img src="https://www.clipartmax.com/png/middle/149-1497912_blood-donation-up-donor-darah-logo-png.png" style={{ width: "70px" }} alt="Blood Donation Logo" />
             </Link>
             <button
               className="navbar-toggler"
@@ -45,58 +32,39 @@ function App() {
               id="navbarSupportedContent"
             >
               <ul className="navbar-nav mr-auto mb-2 mb-lg-0">
-      
-                <li className="nav-item ">
-                  <Link className="nav-link active" to="">
+                <li className="nav-item">
+                  <Link className="nav-link active" to="/">
                     About Us
                   </Link>
                 </li>
-                <li className="nav-item ">
-                  <Link className="nav-link active" to="LookingForBlood">
-                    Thalassemia Request
+                <li className="nav-item">
+                  <Link className="nav-link active" to="/LookingForBlood">
+                    Recipient
                   </Link>
                 </li>
-                <div className="ms-auto">
-                  <li className="nav-item ">
-                    <Link className="nav-link active" to="wantToDonateBlood">
-                      Want to Donate Blood
-                    </Link>
-                  </li>
-                </div>
-                <div className="ms-auto">
-                  <li className="nav-item ">
-                    <Link className="nav-link active" to="JoinUs">
-                      Join our Network
-                    </Link>
-                  </li>
-                </div>
-                
-                
+                <li className="nav-item">
+                  <Link className="nav-link active" to="/wantToDonateBlood">
+                    Donate Blood
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link active" to="/JoinUs">
+                    Join Network
+                  </Link>
+                </li>
               </ul>
             </div>
           </nav>
-          
-    
+
           <Routes>
             <Route path="/" element={<AboutUs />} />
             <Route path="/LookingForBlood" element={<LookingForBlood />} />
-            <Route path="/wantToDonateBlood" element={<wantToDonateBlood />} />
+            <Route path="/wantToDonateBlood" element={<WantToDonateBlood />} />
             <Route path="/JoinUs" element={<JoinUs />} />
-            <Route path="/DonorLogin" element={<DonorLogin />} /> 
-            
           </Routes>
-
-   
         </div>
       </header>
-      </div>
-      <div className="ms-auto">
-      <li className="nav-item ">
-        <Link className="nav-link active" to="/DonorLogin">Donor Login</Link>
-      </li>
     </div>
-    </>
-  
   );
 }
 
