@@ -5,7 +5,13 @@ import JoinUs from "./components/JoinUs";
 import LookingForBlood from "./components/LookingForBlood";
 import WantToDonateBlood from "./components/wantToDonateBlood";
 import './App.css';
-
+import {
+  Routes,
+  Route,
+  Link,
+  BrowserRouter,
+  useParams
+} from "react-router-dom";
 function App() {
   return (
     <div className="App">
@@ -62,6 +68,10 @@ function App() {
             <Route path="/wantToDonateBlood" element={<WantToDonateBlood />} />
             <Route path="/JoinUs" element={<JoinUs />} />
           </Routes>
+
+          <div>
+            <Donor/>
+          </div>
         </div>
       </header>
     </div>
