@@ -7,6 +7,7 @@ import wantToDonateBlood from "./components/wantToDonateBlood";
 import './App.css';
 import ContactUs from "./components/contact";
 import Patients from "./components/patients";
+import Donor from "./components/donor";
 
 import {
   Routes,
@@ -82,7 +83,7 @@ function App() {
 
           </Routes>
           <div>
-            <Patients/>
+            <Donor/>
 
           </div>
    

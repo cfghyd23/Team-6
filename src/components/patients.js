@@ -38,7 +38,7 @@ const Patients = () => {
   
       try {
         const patientId = auth.currentUser?.uid;
-        const userEmail = auth.currentUser?.email;
+        const patientEmail = auth.currentUser?.email;
   
         await addDoc(patientsCollectionRef, {
           patientName: formData.name,
@@ -53,7 +53,8 @@ const Patients = () => {
           bridgeProg: formData.joinBridgeProgram,
           emergency: formData.emergency,
           previousDate: formData.previousRequestDate,
-          email: userEmail,
+          email: patientEmail,
+          patient_Id: patientId,
         });
   
         setFormData({
@@ -61,7 +62,6 @@ const Patients = () => {
           dob: '',
           gender: 'male',
           location: '',
-          email: '',
           hospital: '',
           bloodgroup: 'A+',
           requiredDate: '',
