@@ -1,5 +1,4 @@
 import React from "react";
-import { Routes, Route, Link } from "react-router-dom";
 import AboutUs from "./components/AboutUs";
 import JoinUs from "./components/JoinUs";
 import LookingForBlood from "./components/LookingForBlood";
@@ -68,14 +67,11 @@ function App() {
 
           <Routes>
             <Route path="/" element={<AboutUs />} />
-            <Route path="/LookingForBlood" element={<LookingForBlood />} />
-            <Route path="/wantToDonateBlood" element={<WantToDonateBlood />} />
+            <Route path="/LookingForBlood" element={<Patients />} />
+            <Route path="/wantToDonateBlood" element={<Donor />} />
             <Route path="/JoinUs" element={<JoinUs />} />
           </Routes>
 
-          <div>
-            <Donor/>
-          </div>
         </div>
       </header>
     </div>

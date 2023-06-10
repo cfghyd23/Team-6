@@ -3,6 +3,7 @@ import firebase from "firebase/app";
 import { db, auth } from '../firebase';
 import { addDoc } from "firebase/firestore";
 import { collection } from "firebase/firestore";
+import './patients.css'
 
 const Patients = () => {
     const [formData, setFormData] = useState({
