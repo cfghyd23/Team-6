@@ -5,6 +5,10 @@ import JoinUs from "./components/JoinUs";
 import LookingForBlood from "./components/LookingForBlood";
 import WantToDonateBlood from "./components/wantToDonateBlood";
 import './App.css';
+import ContactUs from "./components/contact";
+import Patients from "./components/patients";
+import Donor from "./components/donor";
+
 import {
   Routes,
   Route,
