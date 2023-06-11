@@ -1,9 +1,10 @@
 import React from 'react';
+import firebase from 'firebase/app';
 import { db } from '../firebase';
 
 const patientAssigned = () => {
     // Access donor data from Firebase Realtime Database
-    const donorRef = database.ref('Donors');
+    const donorRef = db.ref('Donors');
     const donorList = {};
 
     donorRef.once('value', snapshot => {
@@ -21,7 +22,7 @@ const patientAssigned = () => {
         }
 
         // Access patient data from Firebase Realtime Database
-        const patientRef = database.ref('Patients');
+        const patientRef = db.ref('Patients');
         const patientList = {};
 
         patientRef.once('value', snapshot => {
