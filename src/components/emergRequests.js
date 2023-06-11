@@ -18,7 +18,7 @@ function EmergRequests() {
       }, []);
     
   return (
-    <div>
+    <div className="table-container">
       <h1>Emergency Requests</h1>
       <table>
         <thead>
