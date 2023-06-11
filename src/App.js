@@ -12,7 +12,9 @@ import Dashboard from "./components/Dashboard";
 import LoginDonor from "./components/LoginDonor";
 import Login from "./components/Login";
 import ChatbotComponent from "./components/chatbot";
-
+import bloodWarriors from "./components/bloodWarriors";
+import BloodBank from "./components/bloodBank";
+import EmergRequests from "./components/emergRequests";
 
 function App() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -90,7 +92,9 @@ function App() {
             <Route path="/Dashboard" element={<Dashboard />} />
             <Route path="/Login" element={<LoginDonor />} />
           </Routes>
-
+         <ContactUs/>
+         <BloodBank/>
+         <EmergRequests/>
         </div>
       </header><div> 
       </div>

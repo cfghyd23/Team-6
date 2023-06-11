@@ -82,23 +82,12 @@ const Donor = () => {
             className="form-control"
             id="donorName"
             name="name"
-            value={formData.email}
+            value={formData.donorName}
             onChange={handleChange}
           />
         </div>
-        <div className="mb-3">
-          <label htmlFor="donorEmail" className="form-label">
-            Donor Email
-          </label>
-          <input
-            type="email"
-            className="form-control"
-            id="donorEmail"
-            name="email"
-            value={formData.name}
-            onChange={handleChange}
-          />
-        </div>
+        
+        
         <div className="mb-3">
           <label htmlFor="bloodGroup" className="form-label">
             Blood Group
