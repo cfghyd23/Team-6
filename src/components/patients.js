@@ -48,6 +48,7 @@ const Patients = () => {
           bloodGroup: formData.bloodgroup,
           needWhen: formData.requiredDate,
           componentReqd: formData.component,
+          
           quantityReqd: formData.quantity,
           mobileNo: formData.phone,
           bridgeProg: formData.joinBridgeProgram,

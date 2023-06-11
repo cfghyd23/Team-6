@@ -9,7 +9,7 @@ import ContactUs from "./components/contact";
 import Patients from "./components/patients";
 import Donor from "./components/donor";
 import BloodBank from "./components/bloodBank";
-
+import EmergRequests from "./components/emergRequests";
 import {
   Routes,
   Route,
@@ -84,6 +84,7 @@ function App() {
 
           </Routes>
           <div>
+            <EmergRequests/>
       
 
           </div>
