@@ -46,12 +46,13 @@ const Donor = () => {
         bridgeProg: formData.joinBridgeProgram,
         emergency: formData.emergency,
         lastDonated: formData.previousDonatedDate,
-       email: donorEmail,
+        donorEmail: formData.email,
         donorId: donorId,
       });
 
       setFormData({
         name: '',
+        email:'',
         dob: '',
         gender: 'male',
         location: '',
@@ -81,6 +82,19 @@ const Donor = () => {
             className="form-control"
             id="donorName"
             name="name"
+            value={formData.email}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="donorEmail" className="form-label">
+            Donor Email
+          </label>
+          <input
+            type="email"
+            className="form-control"
+            id="donorEmail"
+            name="email"
             value={formData.name}
             onChange={handleChange}
           />
