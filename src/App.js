@@ -9,6 +9,8 @@ import ContactUs from "./components/contact";
 import Patients from "./components/patients";
 import Donor from "./components/donor";
 import Dashboard from "./components/Dashboard";
+import LoginDonor from "./components/LoginDonor";
+
 
 function App() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -64,7 +66,7 @@ function App() {
                     <Link className="dropdown-item" to="/wantToDonateBlood">
                       Register as Donor
                     </Link>
-                    <Link className="dropdown-item" to="/Dashboard">
+                    <Link className="dropdown-item" to="/LoginDonor">
                       Login as Donor
                     </Link>
                   </div>
@@ -84,6 +86,7 @@ function App() {
             <Route path="/wantToDonateBlood" element={<WantToDonateBlood />} />
             <Route path="/JoinUs" element={<JoinUs />} />
             <Route path="/Dashboard" element={<Dashboard />} />
+            <Route path="/LoginDonor" element={<LoginDonor />} />
           </Routes>
 
         </div>
