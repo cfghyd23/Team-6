@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Dashboard.css'; // Import the CSS file for styling
 
 function Dashboard() {
   const [patientName, setPatientName] = useState('');
@@ -33,16 +34,16 @@ function Dashboard() {
   };
 
   return (
-    <div>
-      <h1>Dashboard</h1>
-      <button onClick={fetchPatientData}>Know your Patient</button>
-      <div>
-        <label>Patient Name: </label>
-        <span>{patientName}</span>
+    <div className="dashboard-container">
+      <h1 className="dashboard-title">Dashboard</h1>
+      <button className="fetch-btn" onClick={fetchPatientData}>Know your Patient</button>
+      <div className="data-container">
+        <label>Patient Name:</label>
+        <span className="data">{patientName}</span>
       </div>
-      <div>
-        <label>Anonymous Mails: </label>
-        <span>{anonymousMails}</span>
+      <div className="data-container">
+        <label>Anonymous Mails:</label>
+        <span className="data">{anonymousMails}</span>
       </div>
     </div>
   );

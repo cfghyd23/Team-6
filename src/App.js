@@ -10,6 +10,7 @@ import Patients from "./components/patients";
 import Donor from "./components/donor";
 import Dashboard from "./components/Dashboard";
 import LoginDonor from "./components/LoginDonor";
+import Login from "./components/Login";
 
 
 function App() {
@@ -66,7 +67,7 @@ function App() {
                     <Link className="dropdown-item" to="/wantToDonateBlood">
                       Register as Donor
                     </Link>
-                    <Link className="dropdown-item" to="/LoginDonor">
+                    <Link className="dropdown-item" to="/Login">
                       Login as Donor
                     </Link>
                   </div>
@@ -86,7 +87,7 @@ function App() {
             <Route path="/wantToDonateBlood" element={<WantToDonateBlood />} />
             <Route path="/JoinUs" element={<JoinUs />} />
             <Route path="/Dashboard" element={<Dashboard />} />
-            <Route path="/LoginDonor" element={<LoginDonor />} />
+            <Route path="/Login" element={<LoginDonor />} />
           </Routes>
 
         </div>
