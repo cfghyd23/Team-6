@@ -3,7 +3,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import AboutUs from "./components/AboutUs";
 import JoinUs from "./components/JoinUs";
 import LookingForBlood from "./components/LookingForBlood";
-import WantToDonateBlood from "./components/WantToDonateBlood";
+import WantToDonateBlood from "./components/wantToDonateBlood";
 import './App.css';
 
 function App() {
