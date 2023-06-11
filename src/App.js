@@ -43,7 +43,7 @@ function App() {
               id="navbarSupportedContent"
             >
               <ul className="navbar-nav mr-auto mb-2 mb-lg-0">
-      
+
                 <li className="nav-item ">
                   <Link className="nav-link active" to="">
                     About Us
@@ -57,23 +57,23 @@ function App() {
                 <div className="ms-auto">
                   <li className="nav-item ">
                     <Link className="nav-link active" to="wantToDonateBlood">
-                      Donate Blood
+                    Donate Blood
                     </Link>
                   </li>
-                </div>
+                  </div>
                 <div className="ms-auto">
                   <li className="nav-item ">
                     <Link className="nav-link active" to="JoinUs">
-                      Join Network
-                    </Link>
-                  </li>
+                    Join Network
+                  </Link>
+                </li>
                 </div>
                 
                 
               </ul>
             </div>
           </nav>
-          
+
     
           <Routes>
             <Route path="/" element={<AboutUs />} />
@@ -88,7 +88,7 @@ function App() {
       
 
           </div>
-   
+
         </div>
       </header>
 
