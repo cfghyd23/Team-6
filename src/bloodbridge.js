@@ -3,13 +3,19 @@ require('firebase/database');
 
 // Initialize Firebase
 const firebaseConfig = {
-    // Your Firebase configuration
+    apiKey: "",
+    authDomain: "rakhtconnect.firebaseapp.com",
+    projectId: "rakhtconnect",
+    storageBucket: "rakhtconnect.appspot.com",
+    messagingSenderId: "767427242361",
+    appId: "1:767427242361:web:6209537af0d751a31667a8",
+    measurementId: "G-68N0YKECXS"
 };
 
 firebase.initializeApp(firebaseConfig);
 
 // Retrieve donor data
-const donorRef = firebase.database().ref('donors');
+const donorRef = firebase.database().ref('Donors');
 donorRef.once('value', snapshot => {
     const donorData = snapshot.val();
 
@@ -27,7 +33,7 @@ donorRef.once('value', snapshot => {
     }
 
     // Retrieve patient data
-    const patientRef = firebase.database().ref('patients');
+    const patientRef = firebase.database().ref('Patients');
     patientRef.once('value', snapshot => {
         const patientData = snapshot.val();
 
