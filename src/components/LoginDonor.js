@@ -1,42 +1,30 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
-import './LoginDonor.css'
+import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
+import { auth } from '../firebase';
+import './LoginDonor.css';
 
 const LoginDonor = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleLogin = () => {
-    // Perform login authentication logic here
-    // You can use an API call or any other method to authenticate the user
-
-    // Assuming authentication is successful, redirect to "/Dashboard"
-    navigate("/Dashboard");
+  const signInWithGoogle = async () => {
+    try {
+      const provider = new GoogleAuthProvider();
+      await signInWithPopup(auth, provider);
+      navigate('/dashboard');
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
     <div>
       <h1>Login</h1>
-      <form>
-        <label>Email:</label>
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <br />
-        <label>Password:</label>
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <br />
-        <button type="button" onClick={handleLogin}>
-          Login
+      <div className='sign-in-with-google-container'>
+        <button className='googleButton-container' onClick={signInWithGoogle}>
+          Sign in with Google
         </button>
-      </form>
+      </div>
     </div>
   );
 };

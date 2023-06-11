@@ -1,30 +1,33 @@
-
-
+import React, { useState } from "react";
+import { Routes, Route, Link } from "react-router-dom";
+import './App.css';
 import AboutUs from "./components/AboutUs";
 import JoinUs from "./components/JoinUs";
 import LookingForBlood from "./components/LookingForBlood";
-import wantToDonateBlood from "./components/wantToDonateBlood";
-import './App.css';
+import WantToDonateBlood from "./components/wantToDonateBlood";
 import ContactUs from "./components/contact";
 import Patients from "./components/patients";
 import Donor from "./components/donor";
-import BloodBank from "./components/bloodBank";
-import EmergRequests from "./components/emergRequests";
-import {
-  Routes,
-  Route,
-  Link,
-  BrowserRouter,
-  useParams
-} from "react-router-dom";
+import Dashboard from "./components/Dashboard";
+import LoginDonor from "./components/LoginDonor";
+import Login from "./components/Login";
+import ChatbotComponent from "./components/chatbot";
+
+
 function App() {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const handleDropdownToggle = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
         <div>
           <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
-            <Link className="navbar-brand" to="">
-              <img src="https://www.clipartmax.com/png/middle/149-1497912_blood-donation-up-donor-darah-logo-png.png" style={{width:"70px"}}/>
+            <Link className="navbar-brand" to="/">
+              <img src="https://www.clipartmax.com/png/middle/149-1497912_blood-donation-up-donor-darah-logo-png.png" style={{ width: "70px" }} alt="Blood Donation Logo" />
             </Link>
             <button
               className="navbar-toggler"
@@ -43,55 +46,54 @@ function App() {
               id="navbarSupportedContent"
             >
               <ul className="navbar-nav mr-auto mb-2 mb-lg-0">
-
-                <li className="nav-item ">
-                  <Link className="nav-link active" to="">
+                <li className="nav-item">
+                  <Link className="nav-link active" to="/">
                     About Us
                   </Link>
                 </li>
-                <li className="nav-item ">
-                  <Link className="nav-link active" to="LookingForBlood">
+                <li className="nav-item">
+                  <Link className="nav-link active" to="/LookingForBlood">
                     Recipient
                   </Link>
                 </li>
-                <div className="ms-auto">
-                  <li className="nav-item ">
-                    <Link className="nav-link active" to="wantToDonateBlood">
+                <li
+                  className={`nav-item dropdown ${isDropdownOpen ? 'show' : ''}`}
+                  onMouseEnter={handleDropdownToggle}
+                  onMouseLeave={handleDropdownToggle}
+                >
+                  <div className="nav-link dropdown-toggle">
                     Donate Blood
-                    </Link>
-                  </li>
                   </div>
-                <div className="ms-auto">
-                  <li className="nav-item ">
-                    <Link className="nav-link active" to="JoinUs">
+                  <div className={`dropdown-menu ${isDropdownOpen ? 'show' : ''}`}>
+                    <Link className="dropdown-item" to="/wantToDonateBlood">
+                      Register as Donor
+                    </Link>
+                    <Link className="dropdown-item" to="/Login">
+                      Login as Donor
+                    </Link>
+                  </div>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link active" to="/JoinUs">
                     Join Network
                   </Link>
                 </li>
-                </div>
-                
-                
               </ul>
             </div>
           </nav>
 
-    
           <Routes>
             <Route path="/" element={<AboutUs />} />
-            <Route path="/LookingForBlood" element={<LookingForBlood/>} />
-            <Route path="/wantToDonateBlood" element={<wantToDonateBlood/>} />
-            <Route path="/JoinUs" element={ <JoinUs/>} />
-            
-
+            <Route path="/LookingForBlood" element={<Patients />} />
+            <Route path="/wantToDonateBlood" element={<WantToDonateBlood />} />
+            <Route path="/JoinUs" element={<JoinUs />} />
+            <Route path="/Dashboard" element={<Dashboard />} />
+            <Route path="/Login" element={<LoginDonor />} />
           </Routes>
-          <div>
-            
-      
-
-          </div>
 
         </div>
-      </header>
-
+      </header><div> 
+      </div>
     </div>
   );
 }
