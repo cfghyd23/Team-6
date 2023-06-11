@@ -1,0 +1,16 @@
+# Team-6
+The basic goal of the application is we tried to introduce new features which gonna have greater impact on the society.
+One Stop Solution connecting all Stakeholders like Patients, Donors, NGOs and any Societies is the basic feature which anyone can provide for the blood donation related app, so we tried to integrate some good impactful features exclusively.
+**Feature Prediction** - where we can predict the requirement of the blood with respect to some specific period and inform NGOs?Patients to get prepared for the transfussion.
+**Anonymous Gratitute Mail** - where this solves the Transparency problem. The Donor gets a anonymous mail from the patient that the Blood has been used correctly and he contributed something good to the society
+This increases the Motivational Incentive and allows the Donor to donate the blood and spread the word to his/her fellow mates to increase the rate of blood donation.
+**Automated Bridge Program** - This thing has been done manually from ages, but we tried to automate it where it follows the Round Robin Fashion and mapps 10-15 donors to a single child and reminds the donors and patients thier respective donation and tranfusion time and send alerts via mails.
+**Emergency Demand & Supply**- Where the Blood components as mentioned in the application can be used depping upon the scarcity of the blood.
+The whole blood can be divided into components and used accordingly with respect to requirements
+This prevents the wastage of the blood in the Blood bank.
+**Join the Blood Warriour Family**- where other society can easily contact Blood Warrier by just clicking the *JOIN US* button provided
+
+**Future Scalabilty**:
+Can create an Automated Voice Call system using DTMF TeleClouds and Multi Language Voice to text converters and integrate with the website where this can help in the Rural areas with out the internet facility.
+Can increase awareness by sending mails and threads to the users
+Connecting Village societies to NGOs and make the blood available to the every area
